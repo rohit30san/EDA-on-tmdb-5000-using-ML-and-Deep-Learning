@@ -1,107 +1,113 @@
-readme:
-  title: "Movie Analytics & Prediction System (TMDB 5000)"
+# Movie Analytics & Prediction System (TMDB 5000)
 
-  description: >
-    This project explores and models the TMDB 5000 Movies Dataset using both
-    traditional machine learning and deep learning techniques. The goal is to
-    analyze movie patterns, derive actor-based insights, and build predictive
-    models for revenue prediction and movie success classification.
+This project analyzes the TMDB 5000 Movies Dataset using both traditional Machine Learning and Deep Learning techniques. It focuses on understanding movie patterns and building predictive models for:
 
-  goals:
-    - "Revenue Prediction (Regression)"
-    - "Movie Success Classification"
-    - "Deep Learning-based Classification"
+- Movie Revenue Prediction (Regression)
+- Movie Success Prediction (Classification)
 
-  project_structure:
-    project_name: "Movie-ML-Project"
-    files:
-      ML.ipynb: "Exploratory Data Analysis + Machine Learning Models"
-      DL.ipynb: "Deep Learning (Neural Network) Model"
-      tmdb_5000_movies.csv: "Required dataset"
-      README.md: "Project documentation"
+--------------------------------------------------------------------
 
-  exploratory_data_analysis:
-    steps:
-      - "Data cleaning and missing value handling"
-      - "Correlation heatmaps"
-      - "Feature distributions"
-      - "Actor-based analysis"
-    actor_insights:
-      - "Most frequent actors"
-      - "Actors with highest total movie revenue"
-      - "Actors with highest average ratings"
+## Files in this Repository
 
-  feature_engineering:
-    methods:
-      - "Standardization using StandardScaler"
-      - "Removal of irrelevant columns"
-      - "Train-test split"
-      - "Addition of constant term for regression"
+- ML.ipynb – Exploratory Data Analysis, feature engineering, and classical ML models  
+- DL.ipynb – Deep learning model using a neural network  
+- tmdb_5000_movies.csv – Dataset used for training and analysis  
 
-  machine_learning_models:
-    regression:
-      models:
-        - "Ridge Regression (RidgeCV)"
-        - "XGBoost Regressor"
-      metrics:
-        - "Mean Squared Error (MSE)"
-        - "Adjusted R² Score"
-      visualization: "XGBoost feature importance plots"
+--------------------------------------------------------------------
 
-    classification:
-      models:
-        - "Logistic Regression"
-        - "XGBoost Classifier"
-      metrics:
-        - "Accuracy"
-        - "Precision"
-        - "Recall"
-        - "F1-score"
-        - "Confusion Matrix"
+## What the Project Includes
 
-  deep_learning_model:
-    type: "Multi-Layer Perceptron (MLP)"
-    framework: "TensorFlow / Keras"
-    architecture:
-      - "Input Layer"
-      - "Dense(64, ReLU)"
-      - "Dropout"
-      - "Dense(32, ReLU)"
-      - "Dropout"
-      - "Output Layer (Sigmoid)"
-    training:
-      - "Validation split"
-      - "Loss curve visualization"
-      - "Comparison with ML models"
+### 1. Exploratory Data Analysis (EDA)
 
-  how_to_run:
-    step_1_install_dependencies: >
-      pip install numpy pandas seaborn matplotlib scikit-learn xgboost tensorflow
+In ML.ipynb, the notebook performs:
 
-    step_2_dataset:
-      instruction: "Place tmdb_5000_movies.csv in the same directory as notebooks"
+- Data cleaning and handling missing values  
+- Visualizations (correlation heatmaps, distributions, trends)  
+- Actor-based insights:
+  - Most frequent actors  
+  - Actors with highest total revenue  
+  - Actors with highest average ratings  
 
-    step_3_run_notebooks:
-      command: "jupyter notebook"
-      order:
-        - "Run ML.ipynb first"
-        - "Then run DL.ipynb"
+--------------------------------------------------------------------
 
-  results_and_insights:
-    - "Traditional ML models perform well with structured features"
-    - "XGBoost generally outperforms Ridge Regression"
-    - "Deep Learning captures nonlinear relationships"
-    - "Actor-based analysis reveals meaningful industry patterns"
+### 2. Machine Learning Models
 
-  technologies_used:
-    - "Python"
-    - "Pandas"
-    - "NumPy"
-    - "Scikit-Learn"
-    - "XGBoost"
-    - "TensorFlow / Keras"
-    - "Matplotlib"
-    - "Seaborn"
+#### Revenue Prediction (Regression)
 
-  author:
-    name: "Rohit Sangwan"
+Models used:
+
+- Ridge Regression  
+- XGBoost Regressor  
+
+Evaluated using:
+
+- Mean Squared Error (MSE)  
+- Adjusted R² Score  
+
+Feature importance is visualized using XGBoost.
+
+#### Movie Success Classification
+
+Models used:
+
+- Logistic Regression  
+- XGBoost Classifier  
+
+Evaluated using:
+
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+- Confusion matrix  
+
+--------------------------------------------------------------------
+
+### 3. Deep Learning Model
+
+In DL.ipynb, a neural network is built using TensorFlow/Keras with:
+
+- Dense layers  
+- Dropout for regularization  
+- Sigmoid output for binary classification  
+
+Training includes:
+
+- Train-validation split  
+- Loss curve visualization  
+
+--------------------------------------------------------------------
+
+## How to Run the Project
+
+1. Install dependencies:
+
+   pip install numpy pandas matplotlib seaborn scikit-learn xgboost tensorflow
+
+2. Place tmdb_5000_movies.csv in the same folder as the notebooks.
+
+3. Open Jupyter Notebook:
+
+   jupyter notebook
+
+4. Run in order:
+
+   ML.ipynb  
+   DL.ipynb  
+
+--------------------------------------------------------------------
+
+## Technologies Used
+
+- Python  
+- Pandas, NumPy  
+- Scikit-Learn  
+- XGBoost  
+- TensorFlow / Keras  
+- Matplotlib, Seaborn  
+
+--------------------------------------------------------------------
+
+## Author
+
+Rohit Sangwan
